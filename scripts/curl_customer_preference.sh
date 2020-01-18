@@ -7,9 +7,10 @@ while :; do
 
 echo "Executing curl in curl pod"
 oc4 exec -n istio-tutorial $CURL_POD curl http://preference:8080
-
+echo "---------------------------------------------------------------------------------"
 echo "Executing curl in customer pod"
 oc4 exec -n istio-tutorial $CUSTOMER_POD -c customer curl http://preference:8080
+echo "---------------------------------------------------------------------------------"
 
 done
 
